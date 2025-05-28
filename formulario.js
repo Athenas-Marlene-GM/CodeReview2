@@ -1,18 +1,21 @@
-var formulario = document.querySelector(".formulario"); // cambié el selector por el de clase establecido en el html en la etiqueta form
+// var ya no se debe usar, debe ser reemplazado por const y let,
+
+
+const formulario = document.querySelector(".formulario"); // cambié el selector por el de clase establecido en el html en la etiqueta form
 
 formulario.onsubmit = function(e) {
 
   e.preventDefault(); // es prevent default para evitar que se recargue la pagina
   
-  var n = formulario.elements[0]
-  var e = formulario.elements[1]
-  var na = formulario.elements[2]
+  let n = formulario.elements[0]
+  let ed = formulario.elements[1] // esta variable no se podia llamar e porque esa variable ya esta siendo usada para el evento
+  let na = formulario.elements[2]
 
-  var nombre = n.value
-  var edad = e.value
+  let nombre = n.value
+  let edad = ed.value
 
-  var i = na.selectedIndex
-  var nacionalidad = na.options[i].value
+  let i = na.selectedIndex
+  let nacionalidad = na.options[i].value
   console.log(nombre, edad)
   console.log(nacionalidad)
 
